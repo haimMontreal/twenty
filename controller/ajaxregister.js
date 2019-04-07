@@ -35,7 +35,6 @@ $(document).ready(function () {
                         $("#response").html(response);
                         if(response.indexOf('Success') >= 0)
                         {
-                            //alert('if statement is true');
                             window.location = 'hidden.php';
                         }
                     },

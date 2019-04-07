@@ -5,7 +5,7 @@ if(isset($_SESSION['loggedIN']))
     header('location:hidden.php');
     exit();
 }
-if (isset($_POST['login']))
+if (isset($_POST['register']))
 {
     $host ="localhost";
     $user = "root";
@@ -15,15 +15,15 @@ if (isset($_POST['login']))
     $dsn = 'mysql:host='.$host.';dbname='.$dbname;
     $connection = new PDO($dsn, $user, $password);
 
-    $email = $_POST['emailPHP'];
-    $password = $_POST['passwordPHP'];
-    $age = $_POST['agePHP'];
-    $name = $_POST['namePHP'];
-    $username = $_POST['usernamePHP'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $age = $_POST['age'];
+    $name = $_POST['name'];
+    $username = $_POST['username'];
 
 
     $data = $connection->query("select id from users where  password='$password' OR username='$username'");
-    if($data->rowCount() == 0)
+    if($data->rowCount() == 0  && strlen($password)==8)
     {
         $sql = 'INSERT INTO users(firstname, email, password, age, username) VALUES(:firstname, :email, :password, :age, :username)';
         $stmt = $connection->prepare($sql);
@@ -36,7 +36,7 @@ if (isset($_POST['login']))
     }
     else
     {
-        exit('<font color="red">Password or username already taken</font>');
+        exit('<font color="red">Password or username already taken or Password doesnt have 8 characters</font>');
     }
     //exit($email . " = " . $password);
 }
