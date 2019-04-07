@@ -8,4 +8,4 @@ if(!isset($_SESSION['loggedIN']))
 
 ?>
 <a href="logout.php">Logout </a><br>
- Welcome You are logged In.
+ Welcome <?php $_SESSION['email'] ?> You are logged In.

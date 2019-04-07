@@ -8,7 +8,7 @@ $(document).ready(function () {
         var name = $("#name").val();
         var username = $("#username").val();
 
-     //checking empty case
+     //checking empty case and lenght of the password
         if(email == "" || password == "" || age=="" || name=="" || username=="" || age<1 || password.length!==8)
         {
             alert('Please check your inputs');

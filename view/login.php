@@ -14,6 +14,8 @@ require_once('../model/database.php');
 
 <p id="response"></p>
 
+<a href="register.php">If you want to register</a>
+
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../controller/jquery.js">
 

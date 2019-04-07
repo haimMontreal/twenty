@@ -17,6 +17,8 @@ require_once('../model/databaseregister.php');
 
 <p id="response"></p>
 
+<a href="login.php">Login</a>
+
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../controller/ajaxregister.js">
 
